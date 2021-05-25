@@ -1,0 +1,118 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<meta charset="UTF-8">
+	<meta http-equiv="X-UA-Compatible" content="IE=edge">
+	<meta name="viewport" content="width=device-width, initial-scale=1.0">
+	<title>Smart Id Scanner</title>
+ <!-- bootstrap css cdn -->
+	        <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css" integrity="sha384-JcKb8q3iqJ61gNV9KGb8thSsNjpSL0n8PARn9HuZOnIxN0hoP+VmmDGMN5t9UJ0Z" crossorigin="anonymous">
+	        <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.css">
+	        <!-- css stylesheet cdn -->
+<link rel="preconnect" href="https://fonts.gstatic.com">
+<link href="https://fonts.googleapis.com/css2?family=Newsreader:wght@300&display=swap" rel="stylesheet">
+<link href="https://fonts.googleapis.com/css2?family=Nunito&display=swap" rel="stylesheet">
+	        <!-- css stylesheet -->
+	        <link rel="stylesheet" href="static/css/style.css">
+<style>
+*{
+margin:0;
+padding:0;
+box-sizing:border-box;
+}
+body{
+background-image:url("https://smartidscanner-imagesource.s3.ap-south-1.amazonaws.com/techboard-webapp-bg.jpg");
+background-size:cover;
+background-repeat:no-repeat;
+font-family: 'Nunito', sans-serif;
+color:white;
+}
+.login{
+margin:20px;
+padding:15px;
+text-align:center;
+color:white;
+font-weight:bold;
+}
+p{
+vertical-align:right;
+line-height:2.0;
+ padding-top: 10px;
+}
+#heading{
+color:#FFA500;
+font-size:25px;
+padding-bottom:15px;
+}
+button{
+margin:15px;
+border-radius:16px;
+padding: 10px 20px;
+background-color:#fc6d14;
+font-size:15px;
+color:#fff;
+border: 3px solid #fc6d14;
+cursor:pointer;
+font-family:'Nunito', sans-serif;
+font-weight:bold;
+}
+input{
+margin:5px;
+font-size:15px;
+padding:10px;
+text-align:center;
+boxing-size:border-box;
+border-radius:25px;
+font-family:'Nunito', sans-serif;
+width:250px;
+border:3px solid #fc6d14;
+}
+a{
+text-decoration:none;
+}
+.top-right{
+top: 125px;
+right: 178px;
+}
+
+#message{
+text-align:left;
+font-weight:bold;
+.logo{
+cursor:pointer;
+height: ;
+width:;
+}
+.login a{
+color:white;
+}
+.login a:hover{
+color:#fc6d14;
+}
+</style>
+</head>
+<body>
+
+<div class="logo mt-3 text-center">
+	        <a class="main-logo-img mt-5" ><img align="center" src="static/img/colourfulcv.png" alt="ComputerVison-logo" height="100px" width="180px"  
+	          </a></div>
+	          
+	          <div class="position-absolute top-right">
+               <a  href="/"><button type="button" class="btn btn-primary">Home</button></a>
+            </div>
+
+
+<div class="login">
+<h2 id="heading"><b>Login Page</b></h2>
+<p id="message">{{msg}}</p>
+<form action="/login" method="post">
+<p>User Name</p>
+<input type="text" name="name" placeholder="Enter User Name" required/>
+<p>Password</p>
+<input type="password" name="password" placeholder="Enter Password" required/><br>
+  <button class="btn btn-primary" type="submit">Login</button>
+</form>
+<p>Don't have an account? <a href="/">Sign Up</a></p>
+</div>
+</body>
+</html>

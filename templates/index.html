@@ -1,0 +1,146 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<meta charset="UTF-8">
+	<meta http-equiv="X-UA-Compatible" content="IE=edge">
+	<meta name="viewport" content="width=device-width, initial-scale=1.0">
+	<title>Smart Id Scanner</title>
+ <!-- bootstrap css cdn -->
+	        <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css" integrity="sha384-JcKb8q3iqJ61gNV9KGb8thSsNjpSL0n8PARn9HuZOnIxN0hoP+VmmDGMN5t9UJ0Z" crossorigin="anonymous">
+	        <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.css">
+	        <!-- css stylesheet cdn -->
+<link rel="preconnect" href="https://fonts.gstatic.com">
+<link href="https://fonts.googleapis.com/css2?family=Newsreader:wght@300&display=swap" rel="stylesheet">
+<link href="https://fonts.googleapis.com/css2?family=Nunito&display=swap" rel="stylesheet">
+	        <!-- css stylesheet -->
+	        <link rel="stylesheet" href="static/css/style.css">
+<style>
+
+*{
+margin:0;
+padding:0;
+box-sizing:border-box;
+}
+body{
+background-image:url("https://smartidscanner-imagesource.s3.ap-south-1.amazonaws.com/techboard-webapp-bg.jpg");
+
+background-size:cover;
+background-repeat:no-repeat;
+font-family: 'Nunito', sans-serif;
+color:white;
+}
+.formbody{
+margin:10px;
+padding: px;
+text-align:center;
+color:white;
+font-weight:bold;
+}
+p{
+vertical-align:right;
+line-height:1.5;
+  padding-top: 10px;
+}
+
+#heading{
+color:#FFA500;
+font-size:25px;
+padding-bottom:15px;
+padding-top:27px;
+}
+input{
+margin:0.2px;
+font-size:15px;
+padding:10px;
+text-align:center;
+boxing-size:border-box;
+border-radius:25px;
+font-family:'Nunito', sans-serif;
+width:250px;
+border:3px solid #fc6d14;
+}
+.form-group.required.control-label input:after{
+content:"*";
+color: red;
+ }
+
+a{
+text-decoration:none;
+}
+
+
+.top-right{
+top: 140px;
+right: 200px;
+}
+
+
+}
+.logo{
+cursor:pointer;
+height:10;
+width:10;
+}
+.formbody a{
+color:white;
+}
+.formbody a:hover{
+color:#fc6d14;
+}
+.checkbox input[type=checkbox], .checkbox-inline input[type=checkbox] {
+    margin-right: 0px;
+    margin-left: -150px;
+}
+
+</style>
+</head>
+<body>
+
+   <div class="logo mt-3 text-center">
+	        <class="main-logo-img mt-5" ><img src="static/img/colourfulcv.png" alt="ComputerVison-logo  height="100px" width="180px">
+	       
+   </div>
+<div class="position-absolute top-right">
+               <a  href="/login"><button type="button" class="btn btn-primary">Login</button></a>
+            </div>
+
+
+ <!-- bootstrap navbar -->
+	 
+<div class="formbody">
+<h2 id="heading"><b>Registration Page</b></h2>
+
+{{msg}}
+<form action="/register" method="post">
+
+
+<p><label>User Name : </label></p>
+
+<input type="text" name="name" placeholder="Enter Your Name" >
+
+<p><label>Email Address :</label></p>
+<input type="text" name="email" placeholder="Enter Your Email Address" pattern="^[\w]{1,}[\w.+-]{0,}@[\w-]{2,}([.][a-zA-Z]{2,}|[.][\w-]{2,}[.][a-zA-Z]{2,})$" title="Please enter valid email address" required/>
+<p><label>Mobile Number :</label></p>
+<input type="Number" name="mobileno" placeholder="Enter Your Mobile Number" required/>
+<p><label>Password :</label></p>
+<input type="password" name="password" placeholder="Create Password" pattern="(?=.*\d)(?=.*[a-z])(?=.*[A-Z]).{6,}" title="At least one number and one uppercase and lowercase letter, and at least 6 or more characters" required /> <br><br>
+      		
+  <div class="form-group">
+    <div class="form-check">
+     <label class="form-check-label" for="invalidCheck2">
+    <label  class="checkbox-inline no_indent">
+      <input class="form-check-input" type="checkbox" value="" id="invalidCheck2" required>
+     
+        Agree all <a href="/tnc">terms and conditions</a>
+      </label> </label>
+    </div>
+
+  </div>
+  <button class="btn btn-primary" type="submit">Register</button>
+
+</form>
+<p>Already, Have an Account? <a href="/login">Login</a></p>
+</div>  
+
+</body>
+</html>
